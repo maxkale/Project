@@ -1,34 +1,38 @@
 @section('header')
 <!DOCTYPE html>
 <html lang="en">
-
   <head>
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin - Dashboard</title>
+    <title>Max Dahsbord</title>
 
+	<!-- Angular Dependacy -->
+	<script src="angular/angular.min.js">	</script>
+	<script src="angular/angular-ui-router.js"></script>
+	<script src="controller/app.js"></script>
+	<script src="controller/MainController.js"></script>
+	<script src="router/router.js"></script>
    	<!-- Bootstrap core CSS-->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom fonts for this template-->
     <link href="css/all.min.css" rel="stylesheet" type="text/css">
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-
+    <link href="css/all.css" rel="stylesheet" type="text/css">
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
     <!-- Custom styles for this template-->
     <link href="css/sb-admin.css" rel="stylesheet">
 
   </head>
 
-   <body id="page-top">
+   <body id="page-top" ng-app='app' ng-controller='MainController'>
 
     <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
 
-      <a class="navbar-brand mr-1" href="index.html">Start Bootstrap</a>
+      <a class="navbar-brand mr-1" href="index.html">Mahesh Kale</a>
 
       <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
         <i class="fa fa-bars"></i>

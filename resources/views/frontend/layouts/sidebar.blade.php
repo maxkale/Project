@@ -3,9 +3,10 @@
   <!-- Sidebar -->
       <ul class="sidebar navbar-nav">
         <li class="nav-item active">
-          <a class="nav-link" href="index.html">
+          <a class="nav-link" ui-sref='home'>
             <i class="fa fa-fw fa-tachometer-alt"></i>
-            <span>Dashboard</span>
+            <span >Dashboard</span>
+
           </a>
         </li>
         <li class="nav-item dropdown">
@@ -42,13 +43,13 @@
           <!-- Breadcrumbs-->
           <ol class="breadcrumb">
             <li class="breadcrumb-item">
-              <a href="#">Dashboard</a>
+              <a ui-sref='home'>Dashboard</a>
             </li>
             <li class="breadcrumb-item active">Overview</li>
           </ol>
 		  <div class='container'>
 		  <div class='row'>
-			<div ng-view></div>
+			<div ui-view></div>
 		  </div>
 		 </div>
 	 
