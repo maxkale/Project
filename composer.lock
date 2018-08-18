@@ -4,8 +4,59 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "d5bca48e56bbf3a25645858fcab9c285",
+    "content-hash": "4fb841bb004fef2bf1da0084c6bf5cfa",
     "packages": [
+        {
+            "name": "artem-schander/l5-modular",
+            "version": "1.4.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Artem-Schander/L5Modular.git",
+                "reference": "0bb366cd34f7d325981726e4022a08f9662c9c9f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Artem-Schander/L5Modular/zipball/0bb366cd34f7d325981726e4022a08f9662c9c9f",
+                "reference": "0bb366cd34f7d325981726e4022a08f9662c9c9f",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": ">=5.1",
+                "php": ">=5.4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "ArtemSchander\\L5Modular\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Artem Schander",
+                    "email": "a.schander@vanameland.de"
+                }
+            ],
+            "description": "Modular pattern generator for Laravel 5",
+            "homepage": "https://github.com/Artem-Schander/L5Modular",
+            "keywords": [
+                "Artem",
+                "Schander",
+                "artisan",
+                "generator",
+                "l5modular",
+                "laravel",
+                "modular",
+                "module",
+                "modules",
+                "pattern",
+                "structure"
+            ],
+            "time": "2017-08-31T18:34:27+00:00"
+        },
         {
             "name": "dnoegel/php-xdg-base-dir",
             "version": "0.1",

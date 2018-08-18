@@ -4,5 +4,9 @@ app.config(['$stateProvider',function($stateProvider)
                 .state('home',{
                    url:'/home',
                    templateUrl:'/home'                   
+        })
+		 .state('User',{
+                   url:'/User',
+                   templateUrl:'/User'                   
         });
-}])
+}]);
