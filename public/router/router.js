@@ -1,4 +1,5 @@
-app.config(['$stateProvider',function($stateProvider)
+ "use strict";
+app.config(['$stateProvider',function($stateProvider,$ocLazyLoad)
 {
    $stateProvider
                 .state('home',{
@@ -7,6 +8,12 @@ app.config(['$stateProvider',function($stateProvider)
         })
 		 .state('User',{
                    url:'/User',
-                   templateUrl:'/User'                   
-        });
+                   templateUrl:'/User' ,
+				resolve: {
+				 return $ocLazyLoad.load ({
+										
+											    files: ['src/controllerJsFile.js']
+												  });
+							});
+			}
 }]);

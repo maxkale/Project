@@ -41,15 +41,8 @@
         <div class="container-fluid">
 
           <!-- Breadcrumbs-->
-          <ol class="breadcrumb">
-            <li class="breadcrumb-item">
-              <a ui-sref='home'>Dashboard</a>
-            </li>
-            <li class="breadcrumb-item active">Overview</li>
-          </ol>
+          
 		  <div class='container'>
-		  <div class='row'>
 			<div ui-view></div>
-		  </div>
 		 </div>
 	 
