@@ -1,19 +1,31 @@
- "use strict";
-app.config(['$stateProvider',function($stateProvider,$ocLazyLoad)
+app.config(['$stateProvider',function($stateProvider,$ocLazyLoadProvider)
 {
-   $stateProvider
-                .state('home',{
-                   url:'/home',
-                   templateUrl:'/home'                   
-        })
-		 .state('User',{
-                   url:'/User',
-                   templateUrl:'/User' ,
-				resolve: {
-				 return $ocLazyLoad.load ({
-										
-											    files: ['src/controllerJsFile.js']
-												  });
-							});
-			}
+	$stateProvider
+    .state('home', {
+        url: "/home",
+        views : {
+            "" : {
+                templateUrl:"/home"
+            }
+        },
+        resolve: {
+            loadMyCtrl: ['$ocLazyLoad', function($ocLazyLoad) {
+                return $ocLazyLoad.load('state1'); // Resolve promise and load before view 
+            }]
+        }
+    })
+    .state('User', {
+        url: "/User",
+        views : {
+            "" : {
+                templateUrl:"/User"
+            }
+        },
+        resolve: {
+            loadMyCtrl: ['$ocLazyLoad', function($ocLazyLoad) {
+                return $ocLazyLoad.load('controller/userController.js'); // Resolve promise and load before view 
+            }]
+        }
+    });
 }]);
+ 

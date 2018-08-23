@@ -13,6 +13,7 @@
 	<!-- Angular Dependacy -->
 	<script src="angular/angular.min.js">	</script>
 	<script src="angular/angular-ui-router.js"></script>
+	<script src="angular/ocLazyLoad.js"></script>
 	<script src="controller/app.js"></script>
 	<script src="controller/MainController.js"></script>
 	<script src="router/router.js"></script>

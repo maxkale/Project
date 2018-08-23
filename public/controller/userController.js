@@ -1,5 +1,7 @@
- "use strict";
-app.controller('userController',function($scope)
+angular.module('app').controller('userCntrl',function($scope)
 {
-	alert('hello');
+	$scope.getData = function()
+	{
+		alert('hello mahesh Kale');
+	}
 });
