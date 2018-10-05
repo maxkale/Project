@@ -4,5 +4,6 @@ Route::group(['module' => 'User', 'middleware' => ['web'], 'namespace' => 'App\M
 
     Route::resource('User', 'UserController');
     Route::post('api/addUser', 'UserController@addUser');
+    
 
 });
