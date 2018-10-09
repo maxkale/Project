@@ -8,7 +8,6 @@
     <i class="fas fa-table"></i>
     User Data
 </div>
-
 </div>
 <div class='row'  ng-controller='userCntrl' ng-init='getData();'>
     <div class="card-body">
