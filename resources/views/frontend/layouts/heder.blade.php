@@ -24,7 +24,7 @@
         <!-- Custom fonts for this template-->
         <link href="css/all.min.css" rel="stylesheet" type="text/css">
         <link href="css/all.css" rel="stylesheet" type="text/css">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/fontawesome/css/all.css"  crossorigin="anonymous">
         <!-- Custom styles for this template-->
         <link href="css/sb-admin.css" rel="stylesheet">
 

@@ -155,6 +155,7 @@
                             <div class="form-group">
                                 <input type="text" placeholder="username" />
                             </div>
+
                             <div class="form-group">
                                 <input type="password" placeholder="Password" />
                             </div>
@@ -170,10 +171,11 @@
                 <div class="right">
                     <div class="content">
                         <h2>Login</h2>
+                        <span ng-if="invalidBtn" style="color:red;">Invalid Email Id Password Try again</span>
                         <form  ng-submit="userAuth(logData)">
                             <div class="form-group">
                                 <input type="text" ng-model="logData.userName" placeholder="username" />
-                                
+
                             </div>
                             <div class="form-group">
                                 <input type="password" ng-model="logData.password" placeholder="Password" />

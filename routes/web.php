@@ -14,10 +14,18 @@
 Auth::routes();
 
 Route::get('/', function() {
+    if (Auth::check()) {
+        return redirect('home');
+    }
+
     return view('auth.login');
 });
 Route::post('user/auth', 'Auth\LoginController@authenticate');
 Route::get('User', 'UserController@index');
+Route::get('logout', function() {
+    Auth::logout();
+    return redirect('/');
+})->middleware('auth');
 Route::get('/home', function () {
     return view('frontend.index');
 })->middleware('auth');
