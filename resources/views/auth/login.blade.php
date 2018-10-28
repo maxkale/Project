@@ -172,16 +172,17 @@
                     <div class="content">
                         <h2>Login</h2>
                         <span ng-if="invalidBtn" style="color:red;">Invalid Email Id Password Try again</span>
-                        <form  ng-submit="userAuth(logData)">
+                        <form novalidate name="loginForm" ng-submit="loginForm.$valid && userAuth(logData)">
                             <div class="form-group">
-                                <input type="text" ng-model="logData.userName" placeholder="username" />
-
+                                <input type="text" required ng-model="logData.userName" name="userName" placeholder="username" />
+                                <span style="color:red;" class="text-danger" ng-if="sbBtn && loginForm.userName.$invalid">Username Required</span>
                             </div>
                             <div class="form-group">
-                                <input type="password" ng-model="logData.password" placeholder="Password" />
+                                <input type="password" required ng-model="logData.password" name="password" placeholder="Password" />
+                                <span style="color:red;" class="text-danger" ng-if="sbBtn && loginForm.password.$invalid">Username Required</span>
                             </div>
                             <!--<button id="goRight" class="off">Sign Up</button>-->
-                            <button id="login" type="submit">Login</button>
+                            <button id="login" ng-click="sbBtn = true;" type="submit">Login</button>
                             <span><a href='javascript:void(0)'>Forget Password</a></span>
                         </form>
                     </div>

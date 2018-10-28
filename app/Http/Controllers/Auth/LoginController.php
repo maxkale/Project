@@ -39,11 +39,15 @@ use AuthenticatesUsers;
     public function authenticate() {
         $postData = file_get_contents('php://input');
         $request = json_decode($postData, true);
-        $authData = $request['userData'];
-        $email = $authData['userName'];
-        $password = $authData['password'];
-        if (Auth::attempt(['email' => $email, 'password' => $password])) {
-           return json_encode(['success' => true]);
+        if (!empty($request)) {
+            $authData = $request['userData'];
+            $email = $authData['userName'];
+            $password = $authData['password'];
+            if (Auth::attempt(['email' => $email, 'password' => $password])) {
+                return json_encode(['success' => true]);
+            } else {
+                return json_encode(['success' => false]);
+            }
         } else {
             return json_encode(['success' => false]);
         }

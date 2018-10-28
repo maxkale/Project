@@ -14,6 +14,9 @@ app.controller('loginController', function ($scope, $http)
             {
                 $scope.invalidBtn = true;
             }
+        },function(resp)
+        {
+            $scope.invalidBtn = true;
         });
     };
 });
