@@ -1,9 +1,12 @@
 <html>
     <head>
         <title>Max Project</title>
-        <script src="angular/angular.min.js"></script>
         <script src="js/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <script src="angular/angular.min.js"></script>
         <script src="js/login.js"></script>
+
         <style>
             body {
                 height: 100%;
@@ -84,10 +87,10 @@
                 margin-left: -125px;
             }
 
-            .content h2 {
+            .content h4 {
                 color: #03A9F4;
                 font-weight: 300;
-                font-size: 35px;
+                /*font-size: 35px;*/
             }
 
             button {
@@ -128,16 +131,16 @@
                 color: #03A9F4;
                 background: #363A3D;
             }
-            input {
-                background: transparent;
-                border: 0;
-                outline: 0;
-                border-bottom: 1px solid #45494C;
-                font-size: 14px;
-                color: #959595;
-                padding: 8px 0;
-                margin-top: 20px;
-            }
+            /*            input {
+                            background: transparent;
+                            border: 0;
+                            outline: 0;
+                            border-bottom: 1px solid #45494C;
+                            font-size: 14px;
+                            color: #959595;
+                            padding: 8px 0;
+                            margin-top: 20px;
+                        }*/
         </style>
     </head>
     <body ng-app="loginApp">
@@ -153,11 +156,11 @@
                         <h2>Sign Up</h2>
                         <form method="post" onsubmit="return false;">
                             <div class="form-group">
-                                <input type="text" placeholder="username" />
+                                <input type="text" class="form-control" placeholder="username" />
                             </div>
 
                             <div class="form-group">
-                                <input type="password" placeholder="Password" />
+                                <input type="password" class="form-control" placeholder="Password" />
                             </div>
                             <div class="form-group">
                                 <input type="submit"  value='Log In' />
@@ -165,27 +168,65 @@
 
                         </form>
                         <button id="goLeft" class="off">Login</button>
-                        <button>Sign up</button>
+
                     </div>
                 </div>
                 <div class="right">
-                    <div class="content">
-                        <h2>Login</h2>
-                        <span ng-if="invalidBtn" style="color:red;">Invalid Email Id Password Try again</span>
-                        <form novalidate name="loginForm" ng-submit="loginForm.$valid && userAuth(logData)">
-                            <div class="form-group">
-                                <input type="text" required ng-model="logData.userName" name="userName" placeholder="username" />
-                                <span style="color:red;" class="text-danger" ng-if="sbBtn && loginForm.userName.$invalid">Username Required</span>
-                            </div>
-                            <div class="form-group">
-                                <input type="password" required ng-model="logData.password" name="password" placeholder="Password" />
-                                <span style="color:red;" class="text-danger" ng-if="sbBtn && loginForm.password.$invalid">Username Required</span>
-                            </div>
-                            <!--<button id="goRight" class="off">Sign Up</button>-->
-                            <button id="login" ng-click="sbBtn = true;" type="submit">Login</button>
-                            <span><a href='javascript:void(0)'>Forget Password</a></span>
-                        </form>
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" target="_self" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Sign In</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" target="_self" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Sign Up</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" target="_self" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Forget Password</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                            <div class="content">
+                                <h4>Sign In</h4>
+                                <span ng-if="invalidBtn" style="color:red;">Invalid Email Id Password Try again</span>
+                                <form novalidate name="loginForm" ng-submit="loginForm.$valid && userAuth(logData)">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" required ng-model="logData.userName" name="userName" placeholder="username" />
+                                        <span style="color:red;" class="text-danger" ng-if="sbBtn && loginForm.userName.$invalid">Username Required</span>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control" required ng-model="logData.password" name="password" placeholder="Password" />
+                                        <span style="color:red;" class="text-danger" ng-if="sbBtn && loginForm.password.$invalid">Username Required</span>
+                                    </div>
+                                    <div class="form-group">
+                                        &nbsp;<button  ng-click="sbBtn = true;" type="submit">Login</button>
+                                    </div>
+                                </form>
+                            </div>  
+                        </div>
+                        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                            <div class="content">
+                                Coming Soon..
+                            </div> 
+                        </div>
+                        <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                            <div class="content">
+                                <!--<h4>Sign In</h4>-->
+                                <span ng-if="error == 1" style="color:red;">Entered Email Not Exist </span>
+                                <span ng-if="error == 0" style="color:red;">Mail Send successfully Please check your mail box</span>
+                                <form novalidate name="forgetForm" ng-submit="forgetForm.$valid && forgetPassword(email)">
+                                    <div class="form-group">
+                                        <label>Enter Registered Email Id</label>
+                                        <input type="text" class="form-control" required ng-model="email.email" name="userName" placeholder="Email Id" />
+                                        <span style="color:red;" class="text-danger" ng-if="sbBtn && forgetForm.userName.$invalid">This field Required</span>
+                                    </div>
+                                    <div class="form-group">
+                                        &nbsp;<button  ng-click="sbBtn = true;" type="submit">Submit</button>
+                                    </div>
+                                </form>
+                            </div> 
+                        </div>
                     </div>
+
                 </div>
             </div>
         </div>

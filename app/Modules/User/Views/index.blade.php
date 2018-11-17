@@ -8,103 +8,83 @@
     <i class="fas fa-table"></i>
     User Data
 </div>
-</div>
 <div class='row'  ng-controller='userCntrl' ng-init='getData();'>
     <div class="card-body">
         <div class="row">
-
-            <div class="col-sm-3"><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                    Add User
-                </button>
-            </div>
-        </div>
-        <br>
-        <div class="table-responsive">
-            <table class="table table-bordered" id="dataTable" cellspacing="0">
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Position</th>
-                        <th>Office</th>
-                        <th>Age</th>
-                        <th>Start date</th>
-                        <th>Salary</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Brenden Wagner</td>
-                        <td>Software Engineer</td>
-                        <td>San Francisco</td>
-                        <td>28</td>
-                        <td>2011/06/07</td>
-                        <td>,850</td>
-                    </tr>
-                </tbody>
-
-            </table>
-        </div>
-        <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
-    </div>
-
-
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Add User</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <form name="userForm" ng-submit="userForm.$valid && addUser(userData);" novalidate>
-                        <div class="row">
-
-                            <div class="col-sm-12">
-                                <div class="form-group">
-                                    <label>First Name</label>
-                                    <input type="text" minlength="3" maxlength="15" name="first_name" ng-model="userData.first_name" class="form-control" required>
-                                    <span ng-if="sbtBtn" ng-messages="userForm.first_name.$error">
-                                        <div class="text-danger" ng-message="required">This field is required</div>
-                                        <div class="text-danger" ng-message="minlength">At least 3 character required</div>
-                                    </span>
-                                </div>
-
+            <div class="row">
+                <div class="col-xl-3 col-sm-6 mb-3">
+                    <div class="card text-white bg-primary o-hidden h-100">
+                        <div class="card-body">
+                            <div class="card-body-icon">
+                                <i class="fas fa-fw fa-comments"></i>
                             </div>
-                            <div class="col-sm-12">
-                                <div class="form-group">
-                                    <label>Last Name</label>
-                                    <input minlength="3" maxlength="15" ng-model="userData.last_name" type="text" name="last_name" class="form-control" required>
-                                    <span ng-if="sbtBtn" ng-messages="userForm.last_name.$error">
-                                        <div class="text-danger" ng-message="required">This field is required</div>
-                                        <div class="text-danger" ng-message="minlength">At least 3 character required</div>
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="col-sm-12">
-                                <div class="form-group">
-                                    <label>Mobile Number</label>
-                                    <input minlength="10" maxlength="10" ng-model="userData.mobile_number" type="text"oninput="this.value=this.value.replace(/[^0-9]/,'');" name="mobile_number" class="form-control" required>
-                                    <span ng-if="sbtBtn" ng-messages="userForm.mobile_number.$error">
-                                        <div class="text-danger" ng-message="required">This field is required</div>
-                                        <div class="text-danger" ng-message="minlength">Mobile number required 10 digit</div>
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="col-sm-12">
-                                <div class="form-group text-center">
-                                    <button type="submit"ng-click="sbtBtn = true" class="btn btn-primary text-center">Add User</button>
-                                </div>
-                            </div>
-
+                            <div class="mr-5">26 New Messages!</div>
                         </div>
-                    </form>
+                        <a class="card-footer text-white clearfix small z-1" href="#">
+                            <span class="float-left">View Details</span>
+                            <span class="float-right">
+                                <i class="fas fa-angle-right"></i>
+                            </span>
+                        </a>
+                    </div>
                 </div>
-
+                <div class="col-xl-3 col-sm-6 mb-3">
+                    <div class="card text-white bg-warning o-hidden h-100">
+                        <div class="card-body">
+                            <div class="card-body-icon">
+                                <i class="fas fa-fw fa-list"></i>
+                            </div>
+                            <div class="mr-5">11 New Tasks!</div>
+                        </div>
+                        <a class="card-footer text-white clearfix small z-1" href="#">
+                            <span class="float-left">View Details</span>
+                            <span class="float-right">
+                                <i class="fas fa-angle-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-sm-6 mb-3">
+                    <div class="card text-white bg-success o-hidden h-100">
+                        <div class="card-body">
+                            <div class="card-body-icon">
+                                <i class="fas fa-fw fa-shopping-cart"></i>
+                            </div>
+                            <div class="mr-5">123 New Orders!</div>
+                        </div>
+                        <a class="card-footer text-white clearfix small z-1" href="#">
+                            <span class="float-left">View Details</span>
+                            <span class="float-right">
+                                <i class="fas fa-angle-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-sm-6 mb-3">
+                    <div class="card text-white bg-danger o-hidden h-100">
+                        <div class="card-body">
+                            <div class="card-body-icon">
+                                <i class="fas fa-fw fa-life-ring"></i>
+                            </div>
+                            <div class="mr-5">13 New Tickets!</div>
+                        </div>
+                        <a class="card-footer text-white clearfix small z-1" href="#">
+                            <span class="float-left">View Details</span>
+                            <span class="float-right">
+                                <i class="fas fa-angle-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-</div>
 
+        </div>
+
+    </div>
+
+</div>
+<style>
+    .card-body {
+        height: 150px;
+    }
+</style>

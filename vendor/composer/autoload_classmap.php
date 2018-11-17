@@ -23,6 +23,8 @@ return array(
     'App\\Http\\Middleware\\VerifyCsrfToken' => $baseDir . '/app/Http/Middleware/VerifyCsrfToken.php',
     'App\\Mail\\SendMailable' => $baseDir . '/app/Mail/SendMailable.php',
     'App\\Models\\User' => $baseDir . '/app/Models/User.php',
+    'App\\Modules\\Dashboard\\Controllers\\DashboardController' => $baseDir . '/app/Modules/Dashboard/Controllers/DashboardController.php',
+    'App\\Modules\\Dashboard\\Models\\Dashboard' => $baseDir . '/app/Modules/Dashboard/Models/Dashboard.php',
     'App\\Modules\\User\\Controllers\\UserController' => $baseDir . '/app/Modules/User/Controllers/UserController.php',
     'App\\Modules\\User\\Models\\User' => $baseDir . '/app/Modules/User/Models/User.php',
     'App\\Providers\\AppServiceProvider' => $baseDir . '/app/Providers/AppServiceProvider.php',

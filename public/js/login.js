@@ -9,16 +9,32 @@ app.controller('loginController', function ($scope, $http)
         {
             if (response.data.success)
             {
-                window.location = '/home';
+                window.location = '/home#!/User';
             } else
             {
                 $scope.invalidBtn = true;
             }
-        },function(resp)
+        }, function (resp)
         {
             $scope.invalidBtn = true;
         });
     };
+    $scope.forgetPassword = function (data)
+    {
+        $scope.invalidBtn = false;
+        $scope.error = 3;
+        $http.post('application/forgetPassword', {data: data}).then(function (reposonse)
+        {
+            if (reposonse.data.success)
+            {
+                $scope.error = 0;
+
+            } else
+            {
+                $scope.error = 1;
+            }
+        })
+    }
 });
 $(document).ready(function () {
     $('#goRight').on('click', function () {

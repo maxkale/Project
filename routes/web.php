@@ -21,6 +21,7 @@ Route::get('/', function() {
     return view('auth.login');
 });
 Route::post('user/auth', 'Auth\LoginController@authenticate');
+Route::post('application/forgetPassword', 'Auth\ForgotPasswordController@forgetPassword');
 Route::get('User', 'UserController@index');
 Route::get('logout', function() {
     Auth::logout();

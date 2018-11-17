@@ -341,6 +341,8 @@ class ComposerStaticInitb6f887a97342a8e896c5fb24c54620b0
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
         'App\\Mail\\SendMailable' => __DIR__ . '/../..' . '/app/Mail/SendMailable.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
+        'App\\Modules\\Dashboard\\Controllers\\DashboardController' => __DIR__ . '/../..' . '/app/Modules/Dashboard/Controllers/DashboardController.php',
+        'App\\Modules\\Dashboard\\Models\\Dashboard' => __DIR__ . '/../..' . '/app/Modules/Dashboard/Models/Dashboard.php',
         'App\\Modules\\User\\Controllers\\UserController' => __DIR__ . '/../..' . '/app/Modules/User/Controllers/UserController.php',
         'App\\Modules\\User\\Models\\User' => __DIR__ . '/../..' . '/app/Modules/User/Models/User.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
