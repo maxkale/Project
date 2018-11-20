@@ -1,16 +1,5 @@
 @section('footer')
-<footer class="sticky-footer">
-    <div class="container my-auto">
-        <div class="copyright text-center my-auto">
-            <span>Copyright @ Max Kale 2018</span>
-        </div>
-    </div>
-</footer>
 
-</div>
-<!-- /.content-wrapper -->
-
-</div>
 <!-- /#wrapper -->
 
 <!-- Scroll to Top Button-->
@@ -43,6 +32,18 @@
 
 <!-- Core plugin JavaScript-->
 <script src="js/jquery.easing.min.js"></script>
+<!--<footer class="sticky-footer">
+    <div class="container my-auto">
+        <div class="copyright text-center my-auto">
+            <span>Copyright @ Max Kale 2018</span>
+        </div>
+    </div>
+</footer>-->
+
+</div>
+<!-- /.content-wrapper -->
+
+</div>
 
 
 </body>

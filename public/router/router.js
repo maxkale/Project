@@ -39,6 +39,19 @@ app.config(['$stateProvider', function ($stateProvider, $ocLazyLoadProvider)
                                 return $ocLazyLoad.load('controller/userController.js'); // Resolve promise and load before view 
                             }]
                     }
-                });
+                })
+                .state('profile', {
+                    url: "/profile",
+                    views: {
+                        "": {
+                            templateUrl: "/Profile"
+                        }
+                    },
+                    resolve: {
+                        loadMyCtrl: ['$ocLazyLoad', function ($ocLazyLoad) {
+                                return $ocLazyLoad.load('controller/userController.js'); // Resolve promise and load before view 
+                            }]
+                    }
+                })
     }]);
  

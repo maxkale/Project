@@ -25,6 +25,8 @@ return array(
     'App\\Models\\User' => $baseDir . '/app/Models/User.php',
     'App\\Modules\\Dashboard\\Controllers\\DashboardController' => $baseDir . '/app/Modules/Dashboard/Controllers/DashboardController.php',
     'App\\Modules\\Dashboard\\Models\\Dashboard' => $baseDir . '/app/Modules/Dashboard/Models/Dashboard.php',
+    'App\\Modules\\Profile\\Controllers\\ProfileController' => $baseDir . '/app/Modules/Profile/Controllers/ProfileController.php',
+    'App\\Modules\\Profile\\Models\\Profile' => $baseDir . '/app/Modules/Profile/Models/Profile.php',
     'App\\Modules\\User\\Controllers\\UserController' => $baseDir . '/app/Modules/User/Controllers/UserController.php',
     'App\\Modules\\User\\Models\\User' => $baseDir . '/app/Modules/User/Models/User.php',
     'App\\Providers\\AppServiceProvider' => $baseDir . '/app/Providers/AppServiceProvider.php',

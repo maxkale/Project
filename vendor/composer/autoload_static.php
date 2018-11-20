@@ -343,6 +343,8 @@ class ComposerStaticInitb6f887a97342a8e896c5fb24c54620b0
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
         'App\\Modules\\Dashboard\\Controllers\\DashboardController' => __DIR__ . '/../..' . '/app/Modules/Dashboard/Controllers/DashboardController.php',
         'App\\Modules\\Dashboard\\Models\\Dashboard' => __DIR__ . '/../..' . '/app/Modules/Dashboard/Models/Dashboard.php',
+        'App\\Modules\\Profile\\Controllers\\ProfileController' => __DIR__ . '/../..' . '/app/Modules/Profile/Controllers/ProfileController.php',
+        'App\\Modules\\Profile\\Models\\Profile' => __DIR__ . '/../..' . '/app/Modules/Profile/Models/Profile.php',
         'App\\Modules\\User\\Controllers\\UserController' => __DIR__ . '/../..' . '/app/Modules/User/Controllers/UserController.php',
         'App\\Modules\\User\\Models\\User' => __DIR__ . '/../..' . '/app/Modules/User/Models/User.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
