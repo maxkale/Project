@@ -15,10 +15,9 @@ Auth::routes();
 
 Route::get('/', function() {
     if (Auth::check()) {
-        return redirect('/home');
-    }
-
-    return view('auth.login');
+        return view('frontend.index');
+    } else
+        return view('auth.login');
 });
 Route::post('user/auth', 'Auth\LoginController@authenticate');
 Route::post('application/forgetPassword', 'Auth\ForgotPasswordController@forgetPassword');
@@ -27,6 +26,4 @@ Route::get('logout', function() {
     Auth::logout();
     return redirect('/');
 })->middleware('auth');
-Route::get('/home', function () {
-    return view('frontend.index');
-})->middleware('auth');
+

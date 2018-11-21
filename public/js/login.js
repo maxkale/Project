@@ -9,7 +9,8 @@ app.controller('loginController', function ($scope, $http)
         {
             if (response.data.success)
             {
-                window.location = '/home#!/User';
+                window.location = '/#!/profile';
+                location.reload();
             } else
             {
                 $scope.invalidBtn = true;
