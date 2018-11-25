@@ -1,7 +1,8 @@
 var app = angular.module('loginApp', []);
-app.controller('loginController', function ($scope, $http)
+app.controller('loginController', function ($scope, $http, $timeout)
 {
     $scope.invalidBtn = false;
+    $scope.logData = {};
     $scope.userAuth = function (userData)
     {
         $scope.invalidBtn = false;
@@ -11,6 +12,7 @@ app.controller('loginController', function ($scope, $http)
             {
                 window.location = '/#!/profile';
                 location.reload();
+                $scope.logData = {};
             } else
             {
                 $scope.invalidBtn = true;
@@ -29,6 +31,12 @@ app.controller('loginController', function ($scope, $http)
             if (reposonse.data.success)
             {
                 $scope.error = 0;
+                $timeout(function ()
+                {
+                    $scope.logData = {};
+                    location.reload();
+                }, 5000);
+
 
             } else
             {

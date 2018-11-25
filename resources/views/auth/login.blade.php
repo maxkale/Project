@@ -153,22 +153,6 @@
             <div class="topLayer">
                 <div class="left">
                     <div class="content">
-                        <h2>Sign Up</h2>
-                        <form method="post" onsubmit="return false;">
-                            <div class="form-group">
-                                <input type="text" class="form-control" placeholder="username" />
-                            </div>
-
-                            <div class="form-group">
-                                <input type="password" class="form-control" placeholder="Password" />
-                            </div>
-                            <div class="form-group">
-                                <input type="submit"  value='Log In' />
-                            </div>
-
-                        </form>
-                        <button id="goLeft" class="off">Login</button>
-
                     </div>
                 </div>
                 <div class="right">

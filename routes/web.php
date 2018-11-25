@@ -26,4 +26,8 @@ Route::get('logout', function() {
     Auth::logout();
     return redirect('/');
 })->middleware('auth');
+Route::get('getCurrentUser', 'Controller@getCurrentUser');
+Route::get('getCountry', 'Controller@getCountry');
+Route::post('getState', 'Controller@getState');
+Route::post('getCity', 'Controller@getCity');
 

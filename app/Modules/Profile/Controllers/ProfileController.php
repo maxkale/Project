@@ -5,17 +5,15 @@ namespace App\Modules\Profile\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-class ProfileController extends Controller
-{
+class ProfileController extends Controller {
 
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-        return view("Profile::index");
+    public function index() {
+        return view("Profile::index")->with(['name' => 'Mahesh Kale']);
     }
 
     /**
@@ -23,8 +21,7 @@ class ProfileController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
+    public function create() {
         //
     }
 
@@ -34,8 +31,7 @@ class ProfileController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
-    {
+    public function store(Request $request) {
         //
     }
 
@@ -45,8 +41,7 @@ class ProfileController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
-    {
+    public function show($id) {
         //
     }
 
@@ -56,8 +51,7 @@ class ProfileController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
-    {
+    public function edit($id) {
         //
     }
 
@@ -68,9 +62,22 @@ class ProfileController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
-    {
-        //
+    public function update() {
+        $postData = file_get_contents('php://input');
+        $request = json_decode($postData, true);
+        if (!empty($request['userData'])) {
+            $request = $request['userData'];
+            $request['updated_at'] = date('Y-m-d h:i:s');
+            $update = \App\User::where('id', $request['id'])->update($request);
+            if ($update) {
+                $result = ['success' => true];
+            } else {
+                $result = ['success' => false];
+            }
+        } else {
+            $result = ['success' => false];
+        }
+        return json_encode($result);
     }
 
     /**
@@ -79,8 +86,8 @@ class ProfileController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
-    {
+    public function destroy($id) {
         //
     }
+
 }

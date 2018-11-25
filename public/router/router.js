@@ -49,7 +49,9 @@ app.config(['$stateProvider', function ($stateProvider, $ocLazyLoadProvider)
                     },
                     resolve: {
                         loadMyCtrl: ['$ocLazyLoad', function ($ocLazyLoad) {
-                                return $ocLazyLoad.load('controller/userController.js'); // Resolve promise and load before view 
+                                return $ocLazyLoad.load([
+                                    'controller/profile.js'
+                                ]); // Resolve promise and load before view 
                             }]
                     }
                 })

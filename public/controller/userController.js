@@ -1,4 +1,4 @@
-angular.module('app').controller('userCntrl', function ($scope, $http)
+app.controller('userCntrl', function ($scope, $http)
 {
     $scope.sbtBtn = false;
     $scope.addUser = function (data)

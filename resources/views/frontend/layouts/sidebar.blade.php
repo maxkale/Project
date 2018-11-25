@@ -12,10 +12,10 @@
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="javascript:void(0);" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <i class="fa fa-fw fa-folder"></i>
-                <span>Pages</span>
+                <span>User</span>
             </a>
-            <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-                <h6 class="dropdown-header">Login Screens:</h6>
+            <div class="dropdown-menu menuclass" aria-labelledby="pagesDropdown">
+                <h6 class="dropdown-header">User Pages:</h6>
                 <a class="dropdown-item"  ui-sref="dashboard">Login</a>
                 <a class="dropdown-item" href="register.html">Register</a>
                 <a class="dropdown-item" href="forgot-password.html">Forgot Password</a>
@@ -46,3 +46,10 @@
                 <div ui-view></div>
             </div>
 
+            <style>
+                .menuclass
+                {
+                    width:100%;
+                    margin: 0px;  
+                }
+            </style>
